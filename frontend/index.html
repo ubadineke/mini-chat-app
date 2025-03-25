@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple WhatsApp-like Chat App</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="user-selection">
+        <h2>Select User</h2>
+        <select id="user-select">
+          <option value="">Choose a User</option>
+          <option value="alice">Alice</option>
+          <option value="bob">Bob</option>
+        </select>
+      </div>
+
+      <div class="chat-container" id="chat-container" style="display: none">
+        <div class="chat-header">
+          <div id="recipient-name">Recipient</div>
+          <div id="online-status" class="offline">Offline</div>
+        </div>
+
+        <div class="messages-area" id="messages-area">
+          <!-- Messages will be dynamically added here -->
+        </div>
+
+        <div class="message-input">
+          <input type="text" id="message-input" placeholder="Type a message..." />
+          <button id="send-button">Send</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
