@@ -123,8 +123,7 @@ class ChatServer {
         );
 
         // Mark as delivered
-        msg.delivered = true;
-        await msg.save();
+        await Message.deleteOne({ _id: msg._id });
       }
     }
   }
